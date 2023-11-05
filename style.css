@@ -95,7 +95,7 @@ body {
     flex-grow: 1;
 }
 
-.sheet-actions-cont {
+/* .sheet-actions-cont {
     height: 3rem;
     display: flex;
     align-items: center;
@@ -113,6 +113,10 @@ body {
     margin-right: 1rem;
 }
 
+.sheet-add-icon > span:hover {
+    cursor: pointer;
+}
+
 .sheets-folder-cont {
     height: 80%;
     width : calc(100vw - 1.5rem);
@@ -121,11 +125,63 @@ body {
 }
 
 .sheet-folder {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    background-color: lightblue;
     text-decoration: underline;
     font-weight: bold;
     text-decoration-thickness: 3px;
     font-size: 1rem;
-    flex-grow: 1;
+    padding: 5px;
+    margin-inline: 0.8rem;
+    overflow: auto;
+} */
+
+.sheet-actions-cont {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap: 1rem;
+    background-color: #ecf0f1;
+}
+.sheet-actions-cont > * {
+    display: inline-block;
+}
+.sheet-add-icon {
+    width: 2vw;
+}
+.sheet-add-icon:hover {
+    cursor: pointer;
+}
+
+.sheets-folder-cont {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 5rem;
+    width: calc( 100vw - 2vw );
+    overflow: auto;
+}
+.sheet-folder {
+    height: 80%;
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    font-size: 15px;
+    /* background-color: lightblue; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sheet-content {
+   width: fit-content;
+   cursor: pointer;
+   margin-inline: 1rem;
+    /* background-color: lightgreen; */
 }
 
 .grid-cont {

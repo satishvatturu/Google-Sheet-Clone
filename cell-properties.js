@@ -1,28 +1,36 @@
 // Storage
+
+let collectedSheetDB = []; // Contains all sheetDB
+
 let sheetDB = []; // Main array.
 
-for(let i=0;i<rows;i++)
 {
-    let sheetRow = []; // array for each row(subarray).
-    for(let j=0;j<cols;j++)
-    {
-        let cellProp = {
-            bold : false,
-            italic : false,
-            underline : false,
-            alignment : "left", // left, center, right
-            fontFamily : "monospace",
-            fontSize : "14",
-            fontColor : "#000000",
-            BGcolor : "#000000", // just for indication purpose
-            value : "",
-            formula : "",
-            children : [],
-        }
-        sheetRow.push(cellProp); // pushing each object into subarray
-    }
-    sheetDB.push(sheetRow); // pushing (array of each row) subarray into main array.
+    let addSheetBtn = document.querySelector(".sheet-add-icon");
+    addSheetBtn.click();
 }
+
+// for(let i=0;i<rows;i++)
+// {
+//     let sheetRow = []; // array for each row(subarray).
+//     for(let j=0;j<cols;j++)
+//     {
+//         let cellProp = {
+//             bold : false,
+//             italic : false,
+//             underline : false,
+//             alignment : "left", // left, center, right
+//             fontFamily : "monospace",
+//             fontSize : "14",
+//             fontColor : "#000000",
+//             BGcolor : "#000000", // just for indication purpose
+//             value : "",
+//             formula : "",
+//             children : [],
+//         }
+//         sheetRow.push(cellProp); // pushing each object into subarray
+//     }
+//     sheetDB.push(sheetRow); // pushing (array of each row) subarray into main array.
+// }
 
 // Selectors for cell properties.
 // address-bar selector is taken in the grid.js
@@ -191,8 +199,7 @@ function addListernerToAttachCellProperties(cell) {
 
         let formulaBar = document.querySelector(".formula-bar");
         formulaBar.value = cellProp.formula;
-        cell.value = cellProp.value;
-        
+        cell.innerText = cellProp.value;
     });
 };
 

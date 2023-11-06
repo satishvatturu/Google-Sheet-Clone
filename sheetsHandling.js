@@ -8,9 +8,11 @@ addSheetBtn.addEventListener("click", (e) =>{
     let allSheetFolders = document.querySelectorAll(".sheet-folder");
     sheet.setAttribute("id", allSheetFolders.length);
 
-    sheet.innerHTML = `<div class="sheet-content">Sheet- ${allSheetFolders.length+1}</div>`;
+    sheet.innerHTML = `<div class="sheet-content">Sheet ${allSheetFolders.length+1}</div>`;
 
     sheetsFolderCont.appendChild(sheet);
+    sheet.scrollIntoView();
+
     //DB
     createSheetDB();
     handleSheetActiveness(sheet);
